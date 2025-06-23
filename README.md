@@ -17,7 +17,8 @@ The project is divided into two parts:
 - Prevents direct execution of scripts in upload folder
 It helps learners understand both how file upload vulnerabilities are exploited, and how to prevent them effectively.
 
----
+
+![image](https://github.com/user-attachments/assets/1dbab9dc-388f-4adc-9d6d-109dd98b3820)
 
 ##  Disclaimer
 
