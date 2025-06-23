@@ -17,8 +17,29 @@ The project is divided into two parts:
 - Prevents direct execution of scripts in upload folder
 It helps learners understand both how file upload vulnerabilities are exploited, and how to prevent them effectively.
 
+### Key Files & Folders
 
-![image](https://github.com/user-attachments/assets/1dbab9dc-388f-4adc-9d6d-109dd98b3820)
+| File/Folder        | Purpose                                                                                                      |
+|--------------------|--------------------------------------------------------------------------------------------------------------|
+| `index.php`        | Main UI page with upload form and embedded PHP upload handler (both vulnerable and secure logic in comments) |
+| `uploads/`         | Directory where uploaded files are stored and publicly accessible in the vulnerable version                  |
+| `.htaccess`        | Used in the vulnerable version to force Apache to treat non-`.php` files (e.g., `.jpg`) as PHP for execution |
+| `shell.php` (payload) | Malicious test file used to demonstrate command execution via `?cmd=whoami`                               |
+
+
+1. **Clone the Repo**
+   ```bash
+   git clone https://github.com/your-username/file-upload-vulnerability-lab.git
+   
+2. **Set It Up**
+- Move the folder to your XAMPP/htdocs/ directory
+- Start Apache from the XAMPP Control Panel
+- Open in your browser:
+``http://localhost/file-upload-vulnerability-lab/``
+
+3. **Try It Out**
+- Upload test files like .php, .jpg.php, etc.
+- Toggle between vulnerable and secure code blocks in index.php
 
 ##  Disclaimer
 
