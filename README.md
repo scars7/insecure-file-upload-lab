@@ -1,2 +1,27 @@
-# insecure-file-upload-lab
-This is a File Upload Vulnerability Lab Project. It demonstrates how insecure file upload functionality can lead to serious security issues like Remote Code Execution (RCE), and how to properly mitigate them using secure coding practices.
+# File Upload Vulnerability Lab with Mitigation
+This is a hands-on cybersecurity project that demonstrates how file upload functionality can be exploited when improperly handled — and how to secure it using best practices.
+The project is divided into two parts:
+
+###  Vulnerable Version
+- No file extension or MIME type validation
+- No file size restriction
+- No filename sanitization
+- Uploaded files are publicly accessible
+- Demonstrates how attackers can upload PHP shells to gain RCE
+
+###  Secure (Mitigated) Version
+- Allows only safe file types (e.g., `.jpg`, `.png`, `.pdf`, `.txt`, `.docx`)
+- Enforces a 2MB file size limit
+- Validates MIME type using `mime_content_type()`
+- Sanitizes or randomizes uploaded filenames
+- Prevents direct execution of scripts in upload folder
+It helps learners understand both how file upload vulnerabilities are exploited, and how to prevent them effectively.
+
+---
+
+##  Disclaimer
+
+This project contains **intentionally vulnerable code** for educational and testing purposes only.  
+Do **not** deploy the insecure version on a public or production server.
+
+
