@@ -7,7 +7,7 @@ The project is divided into two parts:
 - No file size restriction
 - No filename sanitization
 - Uploaded files are publicly accessible
-- Demonstrates how attackers can upload PHP shells to gain RCE
+- Demonstrates how attackers can upload PHP shells to gain RCE(Remote Code Execution)
 
 ###  Secure (Mitigated) Version
 - Allows only safe file types (e.g., `.jpg`, `.png`, `.pdf`, `.txt`, `.docx`)
@@ -25,6 +25,8 @@ It helps learners understand both how file upload vulnerabilities are exploited,
 | `uploads/`         | Directory where uploaded files are stored and publicly accessible in the vulnerable version                  |
 | `.htaccess`        | Used in the vulnerable version to force Apache to treat non-`.php` files (e.g., `.jpg`) as PHP for execution |
 | `shell.php` (payload) | Malicious test file used to demonstrate command execution via `?cmd=whoami`                               |
+-------------------------------------------------------------------------------------------------------------------------------------
+
 
 
 1. **Clone the Repo**
@@ -40,6 +42,13 @@ It helps learners understand both how file upload vulnerabilities are exploited,
 3. **Try It Out**
 - Upload test files like .php, .jpg.php, etc.
 - Toggle between vulnerable and secure code blocks in index.php
+
+
+
+## Screenshot
+![image](https://github.com/user-attachments/assets/8df707c9-56a7-4bff-b8de-abcfe8f2d593)
+
+
 
 ##  Disclaimer
 
