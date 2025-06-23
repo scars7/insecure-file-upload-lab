@@ -1,0 +1,4 @@
+# Insecure configuration - allows PHP execution in uploads directory
+<FilesMatch ".+">
+    SetHandler application/x-httpd-php
+</FilesMatch>
